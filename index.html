@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParksEnterprise LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Parks Enterprise Logo 2024 ( Logo).png
+            " alt="ParksEnterprise LLC Logo" class="logo">
+            <div class="header-title-center">
+                <h1>ParksEnterprise LLC</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero-wrap">
+            <div class="hero-content">
+                <img src="Parks Enterprise Logo 2024 ( Logo).png" alt="ParksEnterprise LLC Logo" class="hero-logo">
+                <h1>Welcome to ParksEnterprise LLC</h1>
+                <p>Your partner in Data Engineering, Web Development, and Application Solutions.</p>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At ParksEnterprise LLC, we specialize in Data Engineering to empower businesses with cutting-edge solutions. Our services include:</p>
+        </section>
+        <section id="website-development" class="content">
+            <div class="text">
+                <h2>Web Development</h2>
+                <p>Modern websites that enhance your online presence.</p>
+                <p>Our web development services are designed to help your business stand out online. We build fast, secure, and visually stunning websites tailored to your brand and business goals. Whether you need a simple landing page or a complex web application, we deliver solutions that engage your audience and drive results.</p>
+            </div>
+            <div class="image">
+                <div class="photo-frame">
+                    <img src="AI website 1.png" alt="AI Website Example" class="framed-photo">
+                </div>
+            </div>
+        </section>
+        <section id="application-development" class="content">
+            <div class="text">
+                <h2>Application Development</h2>
+                <p><strong>Your Business Needs the Right Tools.</strong> In today's fast-paced world, having the right applications can make all the difference. We build custom apps that help your business run smoother and smarter.</p>
+            </div>
+            <div class="image">
+                <div class="photo-frame">
+                    <img src="AI Application 2.png" alt="AI Application Example" class="framed-photo">
+                </div>
+            </div>
+        </section>
+        <section id="dashboard-creation" class="content">
+            <div class="text">
+                <h2>Dashboard Creation and Data Visualizations</h2>
+                <p>Interactive dashboards for insightful data analysis.</p>
+                <p>A great dashboard can turn complex data into clear insights. We create interactive dashboards that help you make smarter decisions.</p>
+                <p>Clear and impactful visualizations to drive decision-making.</p>
+            </div>
+            <div class="image">
+                <div class="photo-frame">
+                    <img src="Dashboard AI.png" alt="AI Application Example" class="framed-photo">
+                </div>
+            </div>
+        </section>
+        <section id="why-choose-us">
+            <h3>Why Choose Us?</h3>
+            <p>We are dedicated to making businesses better by leveraging data to create powerful tools and insights. Whether you need a custom application, a comprehensive dashboard, or a stunning website, ParksEnterprise LLC is here to help you succeed.</p>
+        </section>
+        <section id="services">
+            
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" autocomplete="off">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:Chris.parks@parksenterprise.org">chris.parks@parksenterprise.com</a></p>
+                <p>Phone: <a href="tel:5714217430">571-421-7430</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ParksEnterprise LLC. All rights reserved.</p>
+    </footer>
+    <script>
+        // Simple form handler (no backend, just UI feedback)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Staggered section reveal on scroll
+        function revealStaggeredSections() {
+            const sections = document.querySelectorAll('section.staggered');
+            const triggerBottom = window.innerHeight * 0.95;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealStaggeredSections);
+        window.addEventListener('load', revealStaggeredSections);
+    </script>
+    <style>
+        .hero-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+        }
+        .hero-logo {
+            max-width: 300px; /* Increased size */
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .photo-frame {
+            margin-left: 20px; /* Added spacing from the text */
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Added shadow around the image */
+            border: none; /* Removed border */
+        }
+        .content {
+            display: flex;
+            align-items: flex-start;
+        }
+        .text {
+            flex: 1;
+        }
+        .image {
+            flex: 0 0 auto;
+        }
+        .framed-photo {
+            max-width: 300px; /* Increased size significantly */
+            height: auto;
+        }
+        .content {
+            overflow: auto; /* Ensures the container wraps around floated elements */
+        }
+        .image {
+            order: 1; /* Position image to the right */
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</body>
+</html>
